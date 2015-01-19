@@ -19,9 +19,10 @@ function repeatFunction(callback, parameters, interval, max, index, context) {
         callback.apply(context, parameters);
 
         setTimeout(function(){
-            repeatFunction(callback, parameters, interval, index + 1, max);
+            repeatFunction(callback, parameters, interval, max, index + 1, context);
         }, interval);
     }
 
     return;
 }
+
